@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="1000" height="240" role="img" aria-labelledby="t d">
+  <title id="t">Indian Grid to WGS84, worked for report L2</title>
+  <desc id="d">Grid eastings and northings, inverse Lambert conformal conic to Everest 1956 latitude and longitude, conversion to Earth-centred XYZ with the datum shift, and final WGS84 latitude and longitude.</desc>
+  <style>
+    .bg{fill:#ffffff;stroke:#d0d7de}
+    .box{fill:#f6f8fa;stroke:#d0d7de;transition:all .2s}
+    .ev .box{fill:#dafbe1;stroke:#4ac26b}
+    .wg .box{fill:#fbefff;stroke:#c297ff}
+    .st:hover .box{stroke-width:2.5}
+    .h{fill:#1f2328;font:600 15px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .v{fill:#1f2328;font:500 14px Consolas,'SFMono-Regular',Menlo,monospace}
+    .p{fill:#59636e;font:400 13px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .op{fill:#0969da;font:600 12px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .link{fill:none;stroke:#0969da;stroke-width:2;stroke-dasharray:5 5;animation:flow 1.2s linear infinite}
+    .head{fill:#0969da}
+    @keyframes flow{to{stroke-dashoffset:-20}}
+    @media (prefers-reduced-motion:reduce){.link{animation:none}}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0d1117;stroke:#30363d}.box{fill:#161b22;stroke:#30363d}
+      .ev .box{fill:#0f2a17;stroke:#2ea043}.wg .box{fill:#271a3d;stroke:#8957e5}
+      .h,.v{fill:#e6edf3}.p{fill:#9198a1}.op,.head{fill:#4493f8}.link{stroke:#4493f8}
+    }
+  </style>
+  <rect class="bg" x="1" y="1" width="998" height="238" rx="18"/>
+
+  <g class="st"><rect class="box" x="24" y="30" width="206" height="150" rx="12"/>
+    <text class="h" x="42" y="58">Grid reference (IIA)</text>
+    <text class="v" x="42" y="92">E 3,068,101 m</text><text class="v" x="42" y="114">N 1,203,024 m</text>
+    <text class="p" x="42" y="160">flat map, metres</text></g>
+
+  <g class="st ev"><rect class="box" x="276" y="30" width="206" height="150" rx="12"/>
+    <text class="h" x="294" y="58">Everest 1956</text>
+    <text class="v" x="294" y="92">28.569955° N</text><text class="v" x="294" y="114">77.322291° E</text>
+    <text class="p" x="294" y="160">old Indian datum</text></g>
+
+  <g class="st ev"><rect class="box" x="528" y="30" width="206" height="150" rx="12"/>
+    <text class="h" x="546" y="58">Earth-centred XYZ</text>
+    <text class="v" x="546" y="88">X 1,230,115 m</text><text class="v" x="546" y="110">Y 5,468,368 m</text><text class="v" x="546" y="132">Z 3,031,884 m</text>
+    <text class="p" x="546" y="160">+295, +736, +257 m</text></g>
+
+  <g class="st wg"><rect class="box" x="780" y="30" width="196" height="150" rx="12"/>
+    <text class="h" x="798" y="58">WGS84 (GPS)</text>
+    <text class="v" x="798" y="92">28.570003° N</text><text class="v" x="798" y="114">77.321000° E</text>
+    <text class="p" x="798" y="160">moved ≈126 m</text></g>
+
+  <path class="link" d="M232 105H268"/><path class="head" d="M266 100l7 5-7 5z"/>
+  <path class="link" d="M484 105H520"/><path class="head" d="M518 100l7 5-7 5z"/>
+  <path class="link" d="M736 105H772"/><path class="head" d="M770 100l7 5-7 5z"/>
+
+  <text class="op" x="127" y="212" text-anchor="middle">remove false E/N</text>
+  <text class="op" x="379" y="212" text-anchor="middle">inverse Lambert conic</text>
+  <text class="op" x="631" y="212" text-anchor="middle">geodetic → ECEF, add shift</text>
+  <text class="op" x="878" y="212" text-anchor="middle">ECEF → geodetic</text>
+</svg>

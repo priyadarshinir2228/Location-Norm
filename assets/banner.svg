@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="1000" height="280" role="img" aria-labelledby="t d">
+  <title id="t">Location Normalisation and Geospatial Analysis by Priyadarshini R</title>
+  <desc id="d">Technical assessment banner. Author: Priyadarshini R, 3rd year B.Tech Artificial Intelligence and Data Science, Chennai Institute of Technology.</desc>
+  <style>
+    .bg{fill:#ffffff;stroke:#d0d7de}
+    .grid{stroke:#eaeef2}
+    .t{fill:#1f2328;font:600 34px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .s{fill:#59636e;font:400 16px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .chip{fill:#ddf4ff;stroke:#54aeff}
+    .chipt{fill:#0550ae;font:500 13px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .card{fill:#f6f8fa;stroke:#d0d7de}
+    .n{fill:#1f2328;font:600 22px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .r{fill:#59636e;font:400 14px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .route{fill:none;stroke:#0969da;stroke-width:2;stroke-dasharray:6 6;animation:flow 1.6s linear infinite}
+    .pin{fill:#0969da}
+    .pin2{fill:#bf3989}
+    .pulse{fill:none;stroke:#0969da;animation:pulse 2s ease-out infinite;transform-origin:center;transform-box:fill-box}
+    .pulse2{fill:none;stroke:#bf3989;animation:pulse 2s ease-out infinite 1s;transform-origin:center;transform-box:fill-box}
+    @keyframes flow{to{stroke-dashoffset:-24}}
+    @keyframes pulse{0%{transform:scale(.4);opacity:1}100%{transform:scale(2.2);opacity:0}}
+    @media (prefers-reduced-motion:reduce){.route,.pulse,.pulse2{animation:none}}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0d1117;stroke:#30363d}.grid{stroke:#161b22}
+      .t,.n{fill:#e6edf3}.s,.r{fill:#9198a1}
+      .chip{fill:#0c2d6b;stroke:#1f6feb}.chipt{fill:#a5d6ff}
+      .card{fill:#161b22;stroke:#30363d}
+      .route{stroke:#4493f8}.pin{fill:#4493f8}.pulse{stroke:#4493f8}
+      .pin2{fill:#f778ba}.pulse2{stroke:#f778ba}
+    }
+  </style>
+  <rect class="bg" x="1" y="1" width="998" height="278" rx="18"/>
+  <g class="grid" stroke-width="1">
+    <path d="M40 60H600M40 110H600M40 160H600M40 210H600"/>
+  </g>
+  <text class="t" x="40" y="72">Location normalisation</text>
+  <text class="t" x="40" y="114">&amp; geospatial analysis</text>
+  <text class="s" x="40" y="148">Mixed-format report locations → WGS84 · 25 km search · Elasticsearch · geohash</text>
+
+  <g>
+    <rect class="chip" x="40" y="172" width="118" height="28" rx="14"/><text class="chipt" x="99" y="191" text-anchor="middle">Indian Grid LCC</text>
+    <rect class="chip" x="168" y="172" width="104" height="28" rx="14"/><text class="chipt" x="220" y="191" text-anchor="middle">Datum shift</text>
+    <rect class="chip" x="282" y="172" width="96" height="28" rx="14"/><text class="chipt" x="330" y="191" text-anchor="middle">Haversine</text>
+    <rect class="chip" x="388" y="172" width="118" height="28" rx="14"/><text class="chipt" x="447" y="191" text-anchor="middle">Elasticsearch</text>
+    <rect class="chip" x="516" y="172" width="86" height="28" rx="14"/><text class="chipt" x="559" y="191" text-anchor="middle">Geohash</text>
+  </g>
+
+  <path class="route" d="M70 245 C 200 215, 420 270, 590 232"/>
+  <circle class="pulse" cx="70" cy="245" r="8" stroke-width="2"/>
+  <circle class="pin" cx="70" cy="245" r="5"/>
+  <circle class="pulse2" cx="590" cy="232" r="8" stroke-width="2"/>
+  <circle class="pin2" cx="590" cy="232" r="5"/>
+
+  <rect class="card" x="640" y="40" width="320" height="200" rx="14"/>
+  <text class="r" x="664" y="76">Submitted by</text>
+  <text class="n" x="664" y="110">Priyadarshini R</text>
+  <text class="r" x="664" y="142">B.Tech Artificial Intelligence</text>
+  <text class="r" x="664" y="162">and Data Science · 3rd year</text>
+  <text class="r" x="664" y="194">Chennai Institute of Technology</text>
+  <text class="r" x="664" y="214">Chennai, Tamil Nadu</text>
+</svg>

@@ -1,0 +1,10 @@
+id,place,raw,format,lat,lon,status,notes,km_from_cp
+L1,"Connaught Place, New Delhi","28.6139, 77.2090",decimal_pair,28.6139,77.209,ok,,0.0
+L2,Noida Sector 18,IIA E 3068101 N 1203024,grid,28.57,77.321,ok,,11.98
+L3,Jaipur,"26°54'45""N 75°47'14""E",dms,26.9125,75.78722,ok,,235.29
+L4,"Karol Bagh, New Delhi","77.1909, 28.6519",decimal_pair,28.6519,77.1909,corrected,"Written as lon,lat: (77.1909, 28.6519) read as lat,lon would be at latitude 77.1909°; swapped.",4.58
+L5,Unknown,"0, 0",decimal_pair,,,invalid,"(0, 0) is a placeholder ('Null Island', Gulf of Guinea), not a real location.",
+L6,Rohtak,,missing,,,invalid,No location supplied (null).,
+L7,Meerut,"28.9845 N, 77.7064 E",hemisphere,28.9845,77.7064,ok,,63.62
+L8,Agra,IIB E 3140017 N 1050679,grid,27.1767,78.0081,corrected,"As zone IIB it lands at (27.1770, 94.0060), 1,581 km from Agra. As zone IIA it is 0.00 km away → zone label is wrong; converted as IIA.",178.06
+L9,Sonipat,IIA E 3037105 N 1249178,grid,28.9931,77.0151,ok,,46.2

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440" role="img" aria-labelledby="t d">
+  <title id="t">Normalised records and 25 km search result</title>
+  <desc id="d">Nine records with raw input, WGS84 output, status and distance from Connaught Place. L1, L4 and L2 are within 25 km. L4 and L8 were corrected, L5 and L6 are invalid.</desc>
+  <style>
+    .bg{fill:#ffffff;stroke:#d0d7de}
+    .hd{fill:#59636e;font:600 12px 'Segoe UI',Helvetica,Arial,sans-serif;letter-spacing:.06em}
+    .row rect{fill:transparent;transition:fill .15s}
+    .row:hover rect{fill:#f6f8fa}
+    .near rect.hl{fill:#ddf4ff}
+    .near:hover rect.hl{fill:#b6e3ff}
+    .id{fill:#1f2328;font:600 14px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .pl{fill:#1f2328;font:400 14px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .mono{fill:#59636e;font:400 13px Consolas,'SFMono-Regular',Menlo,monospace}
+    .out{fill:#1f2328;font:500 13px Consolas,'SFMono-Regular',Menlo,monospace}
+    .ok{fill:#dafbe1;stroke:#4ac26b}.okt{fill:#116329}
+    .fx{fill:#fff8c5;stroke:#d4a72c}.fxt{fill:#7d4e00}
+    .bad{fill:#ffebe9;stroke:#ff8182}.badt{fill:#a40e26}
+    .ct{font:600 12px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .km{fill:#59636e;font:400 13px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .kmn{fill:#0969da;font:600 13px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .line{stroke:#d0d7de}
+    .foot{fill:#59636e;font:400 13px 'Segoe UI',Helvetica,Arial,sans-serif}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0d1117;stroke:#30363d}.hd,.mono,.km,.foot{fill:#9198a1}
+      .row:hover rect{fill:#161b22}.near rect.hl{fill:#0c2d6b}.near:hover rect.hl{fill:#1f3f7a}
+      .id,.pl,.out{fill:#e6edf3}.kmn{fill:#4493f8}.line{stroke:#30363d}
+      .ok{fill:#0f2a17;stroke:#2ea043}.okt{fill:#56d364}
+      .fx{fill:#2e2410;stroke:#bb8009}.fxt{fill:#e3b341}
+      .bad{fill:#3c1218;stroke:#da3633}.badt{fill:#ff7b72}
+    }
+  </style>
+  <rect class="bg" x="1" y="1" width="998" height="438" rx="18"/>
+  <text class="hd" x="36" y="40">ID</text><text class="hd" x="86" y="40">PLACE</text><text class="hd" x="300" y="40">RAW INPUT</text>
+  <text class="hd" x="530" y="40">WGS84 (LAT, LON)</text><text class="hd" x="730" y="40">STATUS</text><text class="hd" x="862" y="40">FROM CP</text>
+  <path class="line" d="M24 52H976"/>
+
+  <g class="row near"><rect class="hl" x="24" y="56" width="952" height="36" rx="6"/>
+    <text class="id" x="36" y="79">L1</text><text class="pl" x="86" y="79">Connaught Place, New Delhi</text><text class="mono" x="300" y="79">28.6139, 77.2090</text>
+    <text class="out" x="530" y="79">28.61390, 77.20900</text><rect class="ok" x="730" y="63" width="64" height="22" rx="11"/><text class="ct okt" x="762" y="79" text-anchor="middle">ok</text>
+    <text class="kmn" x="862" y="79">0.00 km ✓</text></g>
+
+  <g class="row near"><rect class="hl" x="24" y="96" width="952" height="36" rx="6"/>
+    <text class="id" x="36" y="119">L2</text><text class="pl" x="86" y="119">Noida Sector 18</text><text class="mono" x="300" y="119">IIA E 3068101 N 1203024</text>
+    <text class="out" x="530" y="119">28.57000, 77.32100</text><rect class="ok" x="730" y="103" width="64" height="22" rx="11"/><text class="ct okt" x="762" y="119" text-anchor="middle">ok</text>
+    <text class="kmn" x="862" y="119">11.98 km ✓</text></g>
+
+  <g class="row"><rect x="24" y="136" width="952" height="36" rx="6"/>
+    <text class="id" x="36" y="159">L3</text><text class="pl" x="86" y="159">Jaipur</text><text class="mono" x="300" y="159">26°54'45"N 75°47'14"E</text>
+    <text class="out" x="530" y="159">26.91250, 75.78722</text><rect class="ok" x="730" y="143" width="64" height="22" rx="11"/><text class="ct okt" x="762" y="159" text-anchor="middle">ok</text>
+    <text class="km" x="862" y="159">235.29 km</text></g>
+
+  <g class="row near"><rect class="hl" x="24" y="176" width="952" height="36" rx="6"/>
+    <text class="id" x="36" y="199">L4</text><text class="pl" x="86" y="199">Karol Bagh, New Delhi</text><text class="mono" x="300" y="199">77.1909, 28.6519</text>
+    <text class="out" x="530" y="199">28.65190, 77.19090</text><rect class="fx" x="730" y="183" width="92" height="22" rx="11"/><text class="ct fxt" x="776" y="199" text-anchor="middle">corrected</text>
+    <text class="kmn" x="862" y="199">4.58 km ✓</text></g>
+
+  <g class="row"><rect x="24" y="216" width="952" height="36" rx="6"/>
+    <text class="id" x="36" y="239">L5</text><text class="pl" x="86" y="239">Unknown</text><text class="mono" x="300" y="239">0, 0</text>
+    <text class="mono" x="530" y="239">—</text><rect class="bad" x="730" y="223" width="76" height="22" rx="11"/><text class="ct badt" x="768" y="239" text-anchor="middle">invalid</text>
+    <text class="km" x="862" y="239">—</text></g>
+
+  <g class="row"><rect x="24" y="256" width="952" height="36" rx="6"/>
+    <text class="id" x="36" y="279">L6</text><text class="pl" x="86" y="279">Rohtak</text><text class="mono" x="300" y="279">null</text>
+    <text class="mono" x="530" y="279">—</text><rect class="bad" x="730" y="263" width="76" height="22" rx="11"/><text class="ct badt" x="768" y="279" text-anchor="middle">invalid</text>
+    <text class="km" x="862" y="279">—</text></g>
+
+  <g class="row"><rect x="24" y="296" width="952" height="36" rx="6"/>
+    <text class="id" x="36" y="319">L7</text><text class="pl" x="86" y="319">Meerut</text><text class="mono" x="300" y="319">28.9845 N, 77.7064 E</text>
+    <text class="out" x="530" y="319">28.98450, 77.70640</text><rect class="ok" x="730" y="303" width="64" height="22" rx="11"/><text class="ct okt" x="762" y="319" text-anchor="middle">ok</text>
+    <text class="km" x="862" y="319">63.62 km</text></g>
+
+  <g class="row"><rect x="24" y="336" width="952" height="36" rx="6"/>
+    <text class="id" x="36" y="359">L8</text><text class="pl" x="86" y="359">Agra</text><text class="mono" x="300" y="359">IIB E 3140017 N 1050679</text>
+    <text class="out" x="530" y="359">27.17670, 78.00810</text><rect class="fx" x="730" y="343" width="92" height="22" rx="11"/><text class="ct fxt" x="776" y="359" text-anchor="middle">corrected</text>
+    <text class="km" x="862" y="359">178.06 km</text></g>
+
+  <g class="row"><rect x="24" y="376" width="952" height="36" rx="6"/>
+    <text class="id" x="36" y="399">L9</text><text class="pl" x="86" y="399">Sonipat</text><text class="mono" x="300" y="399">IIA E 3037105 N 1249178</text>
+    <text class="out" x="530" y="399">28.99310, 77.01510</text><rect class="ok" x="730" y="383" width="64" height="22" rx="11"/><text class="ct okt" x="762" y="399" text-anchor="middle">ok</text>
+    <text class="km" x="862" y="399">46.20 km</text></g>
+
+  <text class="foot" x="36" y="428">Highlighted rows = within 25 km of Connaught Place (28.6139, 77.2090), by haversine distance.</text>
+</svg>

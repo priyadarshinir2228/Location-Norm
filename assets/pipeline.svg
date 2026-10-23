@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-labelledby="t d">
+  <title id="t">Proposed solution pipeline</title>
+  <desc id="d">Five stages: ingest the Elasticsearch response, detect each location format, convert to WGS84, validate and flag, load into Elasticsearch as geo_point.</desc>
+  <style>
+    .bg{fill:#ffffff;stroke:#d0d7de}
+    .box{fill:#f6f8fa;stroke:#d0d7de;transition:all .2s}
+    .st:hover .box{fill:#ddf4ff;stroke:#0969da}
+    .st{cursor:default}
+    .num{fill:#0969da;font:600 12px 'Segoe UI',Helvetica,Arial,sans-serif;letter-spacing:.08em}
+    .h{fill:#1f2328;font:600 16px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .p{fill:#59636e;font:400 13px 'Segoe UI',Helvetica,Arial,sans-serif}
+    .link{fill:none;stroke:#0969da;stroke-width:2;stroke-dasharray:5 5;animation:flow 1.2s linear infinite}
+    .head{fill:#0969da}
+    .cap{fill:#59636e;font:italic 400 13px 'Segoe UI',Helvetica,Arial,sans-serif}
+    @keyframes flow{to{stroke-dashoffset:-20}}
+    @media (prefers-reduced-motion:reduce){.link{animation:none}}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0d1117;stroke:#30363d}.box{fill:#161b22;stroke:#30363d}
+      .st:hover .box{fill:#0c2d6b;stroke:#4493f8}
+      .num,.head{fill:#4493f8}.link{stroke:#4493f8}
+      .h{fill:#e6edf3}.p,.cap{fill:#9198a1}
+    }
+  </style>
+  <rect class="bg" x="1" y="1" width="998" height="248" rx="18"/>
+
+  <g class="st"><rect class="box" x="24" y="34" width="168" height="160" rx="12"/>
+    <text class="num" x="42" y="62">STEP 1</text><text class="h" x="42" y="86">Ingest</text>
+    <text class="p" x="42" y="112">Read Elasticsearch</text><text class="p" x="42" y="130">response JSON:</text>
+    <text class="p" x="42" y="148">hits.hits[]._source</text><text class="p" x="42" y="174">9 records</text></g>
+
+  <g class="st"><rect class="box" x="220" y="34" width="168" height="160" rx="12"/>
+    <text class="num" x="238" y="62">STEP 2</text><text class="h" x="238" y="86">Detect format</text>
+    <text class="p" x="238" y="112">Regex per format:</text><text class="p" x="238" y="130">grid · DMS · N/E ·</text>
+    <text class="p" x="238" y="148">decimal pair · null</text><text class="p" x="238" y="174">most specific first</text></g>
+
+  <g class="st"><rect class="box" x="416" y="34" width="168" height="160" rx="12"/>
+    <text class="num" x="434" y="62">STEP 3</text><text class="h" x="434" y="86">Convert</text>
+    <text class="p" x="434" y="112">DMS → decimal</text><text class="p" x="434" y="130">Grid → inverse LCC</text>
+    <text class="p" x="434" y="148">→ Everest → XYZ</text><text class="p" x="434" y="174">→ shift → WGS84</text></g>
+
+  <g class="st"><rect class="box" x="612" y="34" width="168" height="160" rx="12"/>
+    <text class="num" x="630" y="62">STEP 4</text><text class="h" x="630" y="86">Validate &amp; flag</text>
+    <text class="p" x="630" y="112">Range · Null Island</text><text class="p" x="630" y="130">Axis-order swap</text>
+    <text class="p" x="630" y="148">India bounding box</text><text class="p" x="630" y="174">Place-name / zone check</text></g>
+
+  <g class="st"><rect class="box" x="808" y="34" width="168" height="160" rx="12"/>
+    <text class="num" x="826" y="62">STEP 5</text><text class="h" x="826" y="86">Load &amp; query</text>
+    <text class="p" x="826" y="112">geo_point + raw text</text><text class="p" x="826" y="130">+ status + notes</text>
+    <text class="p" x="826" y="148">geo_distance 25 km</text><text class="p" x="826" y="174">geohash_grid aggs</text></g>
+
+  <g>
+    <path class="link" d="M194 114H214"/><path class="head" d="M212 109l7 5-7 5z"/>
+    <path class="link" d="M390 114H410"/><path class="head" d="M408 109l7 5-7 5z"/>
+    <path class="link" d="M586 114H606"/><path class="head" d="M604 109l7 5-7 5z"/>
+    <path class="link" d="M782 114H802"/><path class="head" d="M800 109l7 5-7 5z"/>
+  </g>
+  <text class="cap" x="500" y="226" text-anchor="middle">Convert once at load time · keep the original string · every correction is flagged, never silent</text>
+</svg>

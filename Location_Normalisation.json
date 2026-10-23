@@ -1,0 +1,109 @@
+{
+  "took": 3,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 9,
+      "relation": "eq"
+    },
+    "max_score": 1.0,
+    "hits": [
+      {
+        "_index": "locations",
+        "_id": "L1",
+        "_score": 1.0,
+        "_source": {
+          "id": "L1",
+          "place": "Connaught Place, New Delhi",
+          "location": "28.6139, 77.2090"
+        }
+      },
+      {
+        "_index": "locations",
+        "_id": "L2",
+        "_score": 1.0,
+        "_source": {
+          "id": "L2",
+          "place": "Noida Sector 18",
+          "location": "IIA E 3068101 N 1203024"
+        }
+      },
+      {
+        "_index": "locations",
+        "_id": "L3",
+        "_score": 1.0,
+        "_source": {
+          "id": "L3",
+          "place": "Jaipur",
+          "location": "26°54'45\"N 75°47'14\"E"
+        }
+      },
+      {
+        "_index": "locations",
+        "_id": "L4",
+        "_score": 1.0,
+        "_source": {
+          "id": "L4",
+          "place": "Karol Bagh, New Delhi",
+          "location": "77.1909, 28.6519"
+        }
+      },
+      {
+        "_index": "locations",
+        "_id": "L5",
+        "_score": 1.0,
+        "_source": {
+          "id": "L5",
+          "place": "Unknown",
+          "location": "0, 0"
+        }
+      },
+      {
+        "_index": "locations",
+        "_id": "L6",
+        "_score": 1.0,
+        "_source": {
+          "id": "L6",
+          "place": "Rohtak",
+          "location": null
+        }
+      },
+      {
+        "_index": "locations",
+        "_id": "L7",
+        "_score": 1.0,
+        "_source": {
+          "id": "L7",
+          "place": "Meerut",
+          "location": "28.9845 N, 77.7064 E"
+        }
+      },
+      {
+        "_index": "locations",
+        "_id": "L8",
+        "_score": 1.0,
+        "_source": {
+          "id": "L8",
+          "place": "Agra",
+          "location": "IIB E 3140017 N 1050679"
+        }
+      },
+      {
+        "_index": "locations",
+        "_id": "L9",
+        "_score": 1.0,
+        "_source": {
+          "id": "L9",
+          "place": "Sonipat",
+          "location": "IIA E 3037105 N 1249178"
+        }
+      }
+    ]
+  }
+}
